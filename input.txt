@@ -1,0 +1,15 @@
+/id 1 /dataset AnnInput1 /batch FAS157
+/id 2 /dataset AnnInput1 /batch TAX
+/id 3 /dataset AnnInput1 /batch GAAP
+/id 4 /dataset AnnInput1 /batch STAT
+/id 5 /dataset AnnInput1 /batch FAS133
+/id 6 /dataset AnnInput2 /batch FAS157
+/id 7 /dataset AnnInput2 /batch TAX
+/id 8 /dataset AnnInput2 /batch GAAP
+/id 9 /dataset AnnInput2 /batch STAT
+/id 10 /dataset AnnInput2 /batch FAS133
+/id 11 /dataset AnnInput3 /batch FAS157
+/id 12 /dataset AnnInput3 /batch TAX
+/id 13 /dataset AnnInput3 /batch GAAP
+/id 14 /dataset AnnInput3 /batch STAT
+/id 15 /dataset AnnInput3 /batch FAS133

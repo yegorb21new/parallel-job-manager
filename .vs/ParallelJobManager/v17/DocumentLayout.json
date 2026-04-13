@@ -1,0 +1,93 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\_coding\\VisualStudio\\repos\\ParallelJobManager\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{20681336-CCF8-4EAE-A7C3-EE6C6A696887}|ParallelJobManager\\ParallelJobManager.csproj|e:\\_coding\\visualstudio\\repos\\paralleljobmanager\\paralleljobmanager\\gridqueue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20681336-CCF8-4EAE-A7C3-EE6C6A696887}|ParallelJobManager\\ParallelJobManager.csproj|solutionrelative:paralleljobmanager\\gridqueue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20681336-CCF8-4EAE-A7C3-EE6C6A696887}|ParallelJobManager\\ParallelJobManager.csproj|e:\\_coding\\visualstudio\\repos\\paralleljobmanager\\paralleljobmanager\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20681336-CCF8-4EAE-A7C3-EE6C6A696887}|ParallelJobManager\\ParallelJobManager.csproj|solutionrelative:paralleljobmanager\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20681336-CCF8-4EAE-A7C3-EE6C6A696887}|ParallelJobManager\\ParallelJobManager.csproj|e:\\_coding\\visualstudio\\repos\\paralleljobmanager\\paralleljobmanager\\job.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20681336-CCF8-4EAE-A7C3-EE6C6A696887}|ParallelJobManager\\ParallelJobManager.csproj|solutionrelative:paralleljobmanager\\job.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20681336-CCF8-4EAE-A7C3-EE6C6A696887}|ParallelJobManager\\ParallelJobManager.csproj|e:\\_coding\\visualstudio\\repos\\paralleljobmanager\\paralleljobmanager\\inputdef.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20681336-CCF8-4EAE-A7C3-EE6C6A696887}|ParallelJobManager\\ParallelJobManager.csproj|solutionrelative:paralleljobmanager\\inputdef.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\_coding\\VisualStudio\\repos\\ParallelJobManager\\ParallelJobManager\\Program.cs",
+              "RelativeDocumentMoniker": "ParallelJobManager\\Program.cs",
+              "ToolTip": "E:\\_coding\\VisualStudio\\repos\\ParallelJobManager\\ParallelJobManager\\Program.cs",
+              "RelativeToolTip": "ParallelJobManager\\Program.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAswDsAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-09T14:36:09.202Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "InputDef.cs",
+              "DocumentMoniker": "E:\\_coding\\VisualStudio\\repos\\ParallelJobManager\\ParallelJobManager\\InputDef.cs",
+              "RelativeDocumentMoniker": "ParallelJobManager\\InputDef.cs",
+              "ToolTip": "E:\\_coding\\VisualStudio\\repos\\ParallelJobManager\\ParallelJobManager\\InputDef.cs",
+              "RelativeToolTip": "ParallelJobManager\\InputDef.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-11T13:29:01.644Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Job.cs",
+              "DocumentMoniker": "E:\\_coding\\VisualStudio\\repos\\ParallelJobManager\\ParallelJobManager\\Job.cs",
+              "RelativeDocumentMoniker": "ParallelJobManager\\Job.cs",
+              "ToolTip": "E:\\_coding\\VisualStudio\\repos\\ParallelJobManager\\ParallelJobManager\\Job.cs",
+              "RelativeToolTip": "ParallelJobManager\\Job.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-09T15:26:52.051Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GridQueue.cs",
+              "DocumentMoniker": "E:\\_coding\\VisualStudio\\repos\\ParallelJobManager\\ParallelJobManager\\GridQueue.cs",
+              "RelativeDocumentMoniker": "ParallelJobManager\\GridQueue.cs",
+              "ToolTip": "E:\\_coding\\VisualStudio\\repos\\ParallelJobManager\\ParallelJobManager\\GridQueue.cs",
+              "RelativeToolTip": "ParallelJobManager\\GridQueue.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAA5wBwAAABdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-11T13:30:02.891Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

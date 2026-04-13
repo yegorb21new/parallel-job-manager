@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "sqUefUAUuoQ=",
+  "success": true,
+  "projectFilePath": "E:\\_coding\\VisualStudio\\repos\\ParallelJobManager\\ParallelJobManager\\ParallelJobManager.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\yegor\\.nuget\\packages\\system.commandline\\2.0.5\\system.commandline.2.0.5.nupkg.sha512"
+  ],
+  "logs": []
+}

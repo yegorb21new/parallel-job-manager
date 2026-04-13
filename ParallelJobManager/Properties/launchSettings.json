@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ParallelJobManager": {
+      "commandName": "Project",
+      "commandLineArgs": "/id 1 /dataset AnnInput1 /batch FAS157\r\n/id 2 /dataset AnnInput1 /batch TAX"
+    }
+  }
+}
