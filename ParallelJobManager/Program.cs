@@ -1,5 +1,6 @@
 ﻿using ParallelJobManager;
 using System.CommandLine;
+using System.Linq;
 
 namespace ParallelJobManager
 {
@@ -22,15 +23,17 @@ namespace ParallelJobManager
                 "Azure_001"
             };
 
+            var jobsList = new List<Job>();
             var jobQueue = new Queue<Job>();
-            int jobId = 1;
             int completedJobs = 0;
             var runnersList = new List<GridQueue>();
 
             foreach (var item in inputsList)
             {
-                jobQueue.Enqueue(new Job(jobId, item, 750));
-                jobId++;
+                var currJob = new Job(item.Id, item, 750);
+
+                jobQueue.Enqueue(currJob);
+                jobsList.Add(currJob);
             }
 
             int numJobs = jobQueue.Count;
@@ -61,43 +64,28 @@ namespace ParallelJobManager
                     }
                 }
 
-                System.Threading.Thread.Sleep(3000);
+                System.Threading.Thread.Sleep(300);
             }
 
 
-            Console.WriteLine($"[{DateTime.Now}]: All jobs finished.");
+            int successJobs = jobsList.Count(x => x.Status == Helpers.JobStatus.Success);
+            int failedJobs = jobsList.Count(x => x.Status == Helpers.JobStatus.Failure);
+            var listFailedIDs = jobsList
+                .Where(x => x.Status == Helpers.JobStatus.Failure)
+                .Select(x => x.Id);
+
+            Console.WriteLine($"[{DateTime.Now}]: All jobs finished, see job summary below:");
+            Console.WriteLine($"[{DateTime.Now}]: ======================== RUN SUMMARY ========================");
+            Console.WriteLine($"[{DateTime.Now}]: Total Jobs: {numJobs}");
+            Console.WriteLine($"[{DateTime.Now}]: Succeeded: {successJobs}");
+            Console.WriteLine($"[{DateTime.Now}]: Failed: {failedJobs}");
+            Console.Write($"[{DateTime.Now}]: ");
+            Console.WriteLine(listFailedIDs.Any() ? $"Failed Job IDs: {string.Join(", ", listFailedIDs)}": "Failed Job IDs: None");
         }
     }
 
     public static class Helpers
     {
-        public static Queue<Job> CreateJobQueue(List<Job> jobList)
-        {
-            var jobQueue = new Queue<Job>();
-
-
-
-            return jobQueue;
-        }
-
-        public static string CombineCLArgs(string[] args)
-        {
-            string combinedStr = string.Join(" ", args);
-
-            return combinedStr;
-        }
-
-        public static List<Job> CreateJobList(string combinedArgs)
-        {
-            var jobList = new List<Job>();
-
-            combinedArgs = combinedArgs.Trim();
-
-            var inputToList = combinedArgs.Split("/id");
-
-            return jobList;
-        }
-
         public enum JobStatus
         {
             Unknown = -1,

@@ -28,3 +28,4 @@ E:\_coding\VisualStudio\repos\ParallelJobManager\ParallelJobManager\bin\Debug\ne
 E:\_coding\VisualStudio\repos\ParallelJobManager\ParallelJobManager\bin\Debug\net8.0\zh-Hant\System.CommandLine.resources.dll
 E:\_coding\VisualStudio\repos\ParallelJobManager\ParallelJobManager\obj\Debug\net8.0\ParallelJobManager.csproj.AssemblyReference.cache
 E:\_coding\VisualStudio\repos\ParallelJobManager\ParallelJobManager\obj\Debug\net8.0\Parallel.71C66246.Up2Date
+E:\_coding\VisualStudio\repos\ParallelJobManager\ParallelJobManager\obj\Debug\net8.0\ParallelJobManager.sourcelink.json
