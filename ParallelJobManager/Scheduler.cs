@@ -9,30 +9,29 @@ namespace ParallelJobManager
     public class Scheduler
     {
         public Queue<Job> JobQueue { get; private set; }
-        public List<GridQueue> UniverseQueues { get; private set; }
+        public List<GridNode> AllNodes { get; private set; }
         public List<ActiveExecution> ActiveExecutions { get; set; }
 
-        public Scheduler(Queue<Job> jobQueue, List<GridQueue> univQueues)
+        public Scheduler(Queue<Job> jobQueue, List<GridNode> allNodes)
         {
             this.JobQueue = jobQueue;
-            this.UniverseQueues = univQueues;
+            this.AllNodes = allNodes;
             this.ActiveExecutions = new List<ActiveExecution>();
         }
 
-        public async Task<bool> Run()
+        public async Task BeginOrchestration()
         {
-
             while (this.JobQueue.Count > 0 || this.ActiveExecutions.Count > 0)
             {
-                foreach (var gridQ in UniverseQueues)
+                foreach (var node in AllNodes)
                 {
-                    if (gridQ.IsAvailable && this.JobQueue.Count > 0)
+                    if (node.IsAvailable && this.JobQueue.Count > 0)
                     {
                         var nextJob = JobQueue.Dequeue();
-                        gridQ.CurrentJob = nextJob;
-                        var currJobTask = Task.Run(gridQ.Run);
+                        node.CurrentJob = nextJob;
 
-                        var currExecution = new ActiveExecution(gridQ, nextJob, currJobTask);
+                        var currExecution = new ActiveExecution(node, nextJob);
+                        currExecution.Task = Task.Run(currExecution.Run);
 
                         ActiveExecutions.Add(currExecution);
                     }
@@ -43,13 +42,10 @@ namespace ParallelJobManager
                     var finishedTask = await Task.WhenAny(ActiveExecutions.Select(x => x.Task));
                     var finishedExecution = ActiveExecutions.Where(x => x.Task == finishedTask).FirstOrDefault();
 
-                    finishedExecution.Queue = null;
-                    finishedExecution.Job.Status = Helpers.JobStatus.Success;
+                    finishedExecution.GridNode.CurrentJob = null;
                     ActiveExecutions.Remove(finishedExecution);
                 }
             }
-
-            return false;
         }
     }
 }

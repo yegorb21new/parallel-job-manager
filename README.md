@@ -24,8 +24,8 @@ Each job:
 ## Current Features
 
 - Job creation from input definitions (currently hardcoded)
-- Queue-based job assignment
-- Sequential job execution
+- Queue based job assignment
+- Parallel job execution across multiple queues
 - Job lifecycle tracking:
   - Pending → Running → Success / Failure
 - Simulated execution timing and results

@@ -8,16 +8,42 @@ namespace ParallelJobManager
 {
     public class ActiveExecution
     {
-        public GridQueue Queue { get; set; }
+        public GridNode GridNode { get; set; }
         public Job Job { get; set; }
         public Task Task { get; set; }
+        private static readonly Random _random = new();
 
-        public ActiveExecution(GridQueue queue, Job job, Task task)
+        public ActiveExecution(GridNode node, Job job)
         {
-            this.Queue = queue;
+            this.GridNode = node;
             this.Job = job;
-            this.Task = task;
+            this.Task = null;
         }
 
+        public bool Run()
+        {
+            var currJob = Job;
+
+            if (currJob == null)
+            {
+                throw new InvalidOperationException($"No job exists on {GridNode.NodeName} to run.");
+            }
+
+            int runTime = _random.Next(300, 1000);
+            currJob.Status = Helpers.JobStatus.Running;
+
+            Console.WriteLine($"[{DateTime.Now}]: Job number {currJob.Id} Status={currJob.Status} on master node {GridNode.NodeName}");
+            System.Threading.Thread.Sleep(runTime);
+
+            int result = _random.Next(0, 99);
+            currJob.ExitCode = result;
+
+            bool success = result < 90;
+            currJob.Status = success ? Helpers.JobStatus.Success : Helpers.JobStatus.Failure;
+
+            Console.WriteLine($"[{DateTime.Now}]: Job number {currJob.Id} on master node {GridNode.NodeName} ran for {runTime} ms and finished with result={currJob.ExitCode}. Status={currJob.Status}");
+
+            return success;
+        }
     }
 }

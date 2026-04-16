@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ParallelJobManager")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a72da2e1303a9708e6f3322786add01c574a14a5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cabe8fedc1a18e4ff7f9f26b2dc123410acf2cb2")]
 [assembly: System.Reflection.AssemblyProductAttribute("ParallelJobManager")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ParallelJobManager")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

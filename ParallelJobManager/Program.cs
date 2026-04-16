@@ -19,7 +19,7 @@ namespace ParallelJobManager
                 new InputDef(5, "AnnForecast_", "STAT133")
             };
 
-            var queuesList = new List<string>()
+            var nodesList = new List<string>()
             {
                 "ESFS_001",
                 "Azure_001"
@@ -28,7 +28,7 @@ namespace ParallelJobManager
             var jobsList = new List<Job>();
             var jobQueue = new Queue<Job>();
             int completedJobs = 0;
-            var runnersList = new List<GridQueue>();
+            var runnersList = new List<GridNode>();
 
             foreach (var item in inputsList)
             {
@@ -40,13 +40,13 @@ namespace ParallelJobManager
 
             int numJobs = jobQueue.Count;
 
-            foreach (var queue in queuesList)
+            foreach (var node in nodesList)
             {
-                runnersList.Add(new GridQueue(queue));
+                runnersList.Add(new GridNode(node));
             }
 
             var scheduler = new Scheduler(jobQueue, runnersList);
-            await scheduler.Run();
+            await scheduler.BeginOrchestration();
 
 
             int successJobs = jobsList.Count(x => x.Status == Helpers.JobStatus.Success);
