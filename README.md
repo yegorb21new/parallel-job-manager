@@ -1,4 +1,4 @@
-# Parallel Job Manager (Simplified)
+# Parallel Job Manager
 
 A simplified job orchestration system that simulates executing workloads across multiple compute queues.
 
@@ -39,13 +39,16 @@ Each job:
 
 ## Example Output
 
+```
 [4/15/2026 1:19:40 PM]: Job number 1 Status=Running on queue ESFS_001
+[4/15/2026 1:19:41 PM]: Job number 1 on queue ESFS_001 ran for 864 ms and finished with result=23. Status=Success
 ...
 [4/15/2026 1:19:45 PM]: ======================== RUN SUMMARY ========================
 [4/15/2026 1:19:45 PM]: Total Jobs: 5
 [4/15/2026 1:19:45 PM]: Succeeded: 4
 [4/15/2026 1:19:45 PM]: Failed: 1
 [4/15/2026 1:19:45 PM]: Failed Job IDs: 3
+```
 
 ---
 
