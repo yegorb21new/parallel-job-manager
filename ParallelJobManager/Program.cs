@@ -1,12 +1,14 @@
 ﻿using ParallelJobManager;
 using System.CommandLine;
 using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace ParallelJobManager
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
             var inputsList = new List<InputDef>()
             {
@@ -43,29 +45,8 @@ namespace ParallelJobManager
                 runnersList.Add(new GridQueue(queue));
             }
 
-            foreach (var gridQ in runnersList)
-            {
-                var nextJob = jobQueue.Dequeue();
-                gridQ.CurrentJob = nextJob;
-                gridQ.Run();
-                completedJobs++;
-            }
-
-            while (completedJobs < numJobs)
-            {
-                foreach (var gridQ in runnersList)
-                {
-                    if (gridQ.IsAvailable && jobQueue.Count > 0)
-                    {
-                        var nextJob = jobQueue.Dequeue();
-                        gridQ.CurrentJob = nextJob;
-                        gridQ.Run();
-                        completedJobs++;
-                    }
-                }
-
-                System.Threading.Thread.Sleep(300);
-            }
+            var scheduler = new Scheduler(jobQueue, runnersList);
+            await scheduler.Run();
 
 
             int successJobs = jobsList.Count(x => x.Status == Helpers.JobStatus.Success);
@@ -80,19 +61,7 @@ namespace ParallelJobManager
             Console.WriteLine($"[{DateTime.Now}]: Succeeded: {successJobs}");
             Console.WriteLine($"[{DateTime.Now}]: Failed: {failedJobs}");
             Console.Write($"[{DateTime.Now}]: ");
-            Console.WriteLine(listFailedIDs.Any() ? $"Failed Job IDs: {string.Join(", ", listFailedIDs)}": "Failed Job IDs: None");
-        }
-    }
-
-    public static class Helpers
-    {
-        public enum JobStatus
-        {
-            Unknown = -1,
-            Pending = 0,
-            Running,
-            Success,
-            Failure
+            Console.WriteLine(listFailedIDs.Any() ? $"Failed Job IDs: {string.Join(", ", listFailedIDs)}" : "Failed Job IDs: None");
         }
     }
 }
