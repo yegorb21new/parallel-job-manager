@@ -12,11 +12,11 @@ namespace ParallelJobManager
         {
             var inputsList = new List<InputDef>()
             {
-                new InputDef(1, "AnnBase_", "FAS157"),
-                new InputDef(2, "AnnBase_", "TAX"),
-                new InputDef(3, "AnnAttrib_", "GAAP"),
-                new InputDef(4, "AnnForecast_", "STAT107"),
-                new InputDef(5, "AnnForecast_", "STAT133")
+                new InputDef(1, "AnnBase_", "FAS157", 2),
+                new InputDef(2, "AnnBase_", "TAX", 2),
+                new InputDef(3, "AnnAttrib_", "GAAP", 4),
+                new InputDef(4, "AnnForecast_", "STAT107", 9),
+                new InputDef(5, "AnnForecast_", "STAT133", 8)
             };
 
             var nodesList = new List<string>()
@@ -26,26 +26,33 @@ namespace ParallelJobManager
             };
 
             var jobsList = new List<Job>();
-            var jobQueue = new Queue<Job>();
-            int completedJobs = 0;
             var runnersList = new List<GridNode>();
+            var prioritiesToRun = inputsList.Select(x => x.Priority).Distinct();
+            var jobsByPriorityDict = new Dictionary<int, Queue<Job>>();
+
+            foreach (int prio in prioritiesToRun)
+            {
+                jobsByPriorityDict.Add(prio, new Queue<Job>());
+            }
 
             foreach (var item in inputsList)
             {
                 var currJob = new Job(item.Id, item, 750);
+                var currPrio = item.Priority;
 
-                jobQueue.Enqueue(currJob);
+                jobsByPriorityDict[currPrio].Enqueue(currJob);
                 jobsList.Add(currJob);
             }
 
-            int numJobs = jobQueue.Count;
+
+            int numJobs = jobsList.Count;
 
             foreach (var node in nodesList)
             {
                 runnersList.Add(new GridNode(node));
             }
 
-            var scheduler = new Scheduler(jobQueue, runnersList);
+            var scheduler = new Scheduler(jobsByPriorityDict, runnersList);
             await scheduler.BeginOrchestration();
 
 

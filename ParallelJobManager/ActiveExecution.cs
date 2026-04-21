@@ -20,7 +20,7 @@ namespace ParallelJobManager
             this.Task = null;
         }
 
-        public bool Run()
+        public bool ExecuteAsyncJob()
         {
             var currJob = Job;
 

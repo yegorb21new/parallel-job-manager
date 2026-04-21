@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Immutable;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +16,25 @@ namespace ParallelJobManager
             Running,
             Success,
             Failure
+        }
+
+
+        public static Job GetNextJobByPriority(Dictionary<int, Queue<Job>> fullPrioJobsDict)
+        {
+            var listOfPriosInOrder = fullPrioJobsDict.Keys.ToList();
+            listOfPriosInOrder.Sort();
+
+            foreach (int priority in listOfPriosInOrder)
+            {
+                var currPrioJobQueue = fullPrioJobsDict[priority];
+                if (currPrioJobQueue.Count > 0)
+                {
+                    var nextJob = currPrioJobQueue.Dequeue();
+                    return nextJob;
+                }
+            }
+
+            throw new InvalidOperationException("Scheduler should not call GetNextJobByPriority when there are no Jobs left.");
         }
     }
 }

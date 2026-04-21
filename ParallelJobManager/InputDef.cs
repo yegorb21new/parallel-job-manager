@@ -11,12 +11,14 @@ namespace ParallelJobManager
         public int Id { get; private set; }
         public string Dataset { get; private set; }
         public string Batch { get; private set; }
+        public int Priority { get; private set; }
 
-        public InputDef(int id, string dataset, string batch)
+        public InputDef(int id, string dataset, string batch, int priority)
         {
             this.Id = id;
             this.Dataset = dataset;
             this.Batch = batch;
+            this.Priority = priority;
         }
     }
 }
