@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static ParallelJobManager.Helpers;
 
 namespace ParallelJobManager
 {
@@ -30,7 +31,7 @@ namespace ParallelJobManager
             }
 
             int runTime = _random.Next(300, 1000);
-            currJob.Status = Helpers.JobStatus.Running;
+            currJob.Status = JobStatus.Running;
 
             Console.WriteLine($"[{DateTime.Now}]: Job number {currJob.Id} Status={currJob.Status} on master node {GridNode.NodeName}");
             System.Threading.Thread.Sleep(runTime);
@@ -38,8 +39,8 @@ namespace ParallelJobManager
             int result = _random.Next(0, 99);
             currJob.ExitCode = result;
 
-            bool success = result < 90;
-            currJob.Status = success ? Helpers.JobStatus.Success : Helpers.JobStatus.Failure;
+            bool success = result < 50;
+            currJob.Status = success ? JobStatus.Success : JobStatus.Failure;
 
             Console.WriteLine($"[{DateTime.Now}]: Job number {currJob.Id} on master node {GridNode.NodeName} ran for {runTime} ms and finished with result={currJob.ExitCode}. Status={currJob.Status}");
 

@@ -7,28 +7,28 @@
       "RelativeMoniker": "D:0:0:{20681336-CCF8-4EAE-A7C3-EE6C6A696887}|ParallelJobManager\\ParallelJobManager.csproj|solutionrelative:paralleljobmanager\\scheduler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{20681336-CCF8-4EAE-A7C3-EE6C6A696887}|ParallelJobManager\\ParallelJobManager.csproj|e:\\_coding\\visualstudio\\repos\\paralleljobmanager\\paralleljobmanager\\activeexecution.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{20681336-CCF8-4EAE-A7C3-EE6C6A696887}|ParallelJobManager\\ParallelJobManager.csproj|solutionrelative:paralleljobmanager\\activeexecution.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{20681336-CCF8-4EAE-A7C3-EE6C6A696887}|ParallelJobManager\\ParallelJobManager.csproj|e:\\_coding\\visualstudio\\repos\\paralleljobmanager\\paralleljobmanager\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{20681336-CCF8-4EAE-A7C3-EE6C6A696887}|ParallelJobManager\\ParallelJobManager.csproj|solutionrelative:paralleljobmanager\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{20681336-CCF8-4EAE-A7C3-EE6C6A696887}|ParallelJobManager\\ParallelJobManager.csproj|e:\\_coding\\visualstudio\\repos\\paralleljobmanager\\paralleljobmanager\\job.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{20681336-CCF8-4EAE-A7C3-EE6C6A696887}|ParallelJobManager\\ParallelJobManager.csproj|solutionrelative:paralleljobmanager\\job.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{20681336-CCF8-4EAE-A7C3-EE6C6A696887}|ParallelJobManager\\ParallelJobManager.csproj|e:\\_coding\\visualstudio\\repos\\paralleljobmanager\\paralleljobmanager\\helpers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{20681336-CCF8-4EAE-A7C3-EE6C6A696887}|ParallelJobManager\\ParallelJobManager.csproj|solutionrelative:paralleljobmanager\\helpers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{20681336-CCF8-4EAE-A7C3-EE6C6A696887}|ParallelJobManager\\ParallelJobManager.csproj|e:\\_coding\\visualstudio\\repos\\paralleljobmanager\\paralleljobmanager\\activeexecution.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20681336-CCF8-4EAE-A7C3-EE6C6A696887}|ParallelJobManager\\ParallelJobManager.csproj|solutionrelative:paralleljobmanager\\activeexecution.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{20681336-CCF8-4EAE-A7C3-EE6C6A696887}|ParallelJobManager\\ParallelJobManager.csproj|e:\\_coding\\visualstudio\\repos\\paralleljobmanager\\paralleljobmanager\\gridnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{20681336-CCF8-4EAE-A7C3-EE6C6A696887}|ParallelJobManager\\ParallelJobManager.csproj|solutionrelative:paralleljobmanager\\gridnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{20681336-CCF8-4EAE-A7C3-EE6C6A696887}|ParallelJobManager\\ParallelJobManager.csproj|e:\\_coding\\visualstudio\\repos\\paralleljobmanager\\paralleljobmanager\\job.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20681336-CCF8-4EAE-A7C3-EE6C6A696887}|ParallelJobManager\\ParallelJobManager.csproj|solutionrelative:paralleljobmanager\\job.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{20681336-CCF8-4EAE-A7C3-EE6C6A696887}|ParallelJobManager\\ParallelJobManager.csproj|e:\\_coding\\visualstudio\\repos\\paralleljobmanager\\paralleljobmanager\\inputdef.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{20681336-CCF8-4EAE-A7C3-EE6C6A696887}|ParallelJobManager\\ParallelJobManager.csproj|solutionrelative:paralleljobmanager\\inputdef.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20681336-CCF8-4EAE-A7C3-EE6C6A696887}|ParallelJobManager\\ParallelJobManager.csproj|e:\\_coding\\visualstudio\\repos\\paralleljobmanager\\paralleljobmanager\\helpers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20681336-CCF8-4EAE-A7C3-EE6C6A696887}|ParallelJobManager\\ParallelJobManager.csproj|solutionrelative:paralleljobmanager\\helpers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,13 +42,13 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "E:\\_coding\\VisualStudio\\repos\\ParallelJobManager\\ParallelJobManager\\Program.cs",
               "RelativeDocumentMoniker": "ParallelJobManager\\Program.cs",
               "ToolTip": "E:\\_coding\\VisualStudio\\repos\\ParallelJobManager\\ParallelJobManager\\Program.cs",
               "RelativeToolTip": "ParallelJobManager\\Program.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAACEAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-09T14:36:09.202Z",
               "IsPinned": true,
@@ -62,7 +62,7 @@
               "RelativeDocumentMoniker": "ParallelJobManager\\Scheduler.cs",
               "ToolTip": "E:\\_coding\\VisualStudio\\repos\\ParallelJobManager\\ParallelJobManager\\Scheduler.cs",
               "RelativeToolTip": "ParallelJobManager\\Scheduler.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAIwCYAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAACMAAAAAAAAAAAAowD0AAABYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-16T18:20:49.236Z",
               "IsPinned": true,
@@ -74,67 +74,67 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "ActiveExecution.cs",
               "DocumentMoniker": "E:\\_coding\\VisualStudio\\repos\\ParallelJobManager\\ParallelJobManager\\ActiveExecution.cs",
               "RelativeDocumentMoniker": "ParallelJobManager\\ActiveExecution.cs",
               "ToolTip": "E:\\_coding\\VisualStudio\\repos\\ParallelJobManager\\ParallelJobManager\\ActiveExecution.cs",
               "RelativeToolTip": "ParallelJobManager\\ActiveExecution.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAYwCIAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAABQAAAAAAAAAAAAIwC4AAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-16T19:52:32.055Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Helpers.cs",
-              "DocumentMoniker": "E:\\_coding\\VisualStudio\\repos\\ParallelJobManager\\ParallelJobManager\\Helpers.cs",
-              "RelativeDocumentMoniker": "ParallelJobManager\\Helpers.cs",
-              "ToolTip": "E:\\_coding\\VisualStudio\\repos\\ParallelJobManager\\ParallelJobManager\\Helpers.cs",
-              "RelativeToolTip": "ParallelJobManager\\Helpers.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAQwB0AAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-21T21:28:31.73Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "GridNode.cs",
               "DocumentMoniker": "E:\\_coding\\VisualStudio\\repos\\ParallelJobManager\\ParallelJobManager\\GridNode.cs",
               "RelativeDocumentMoniker": "ParallelJobManager\\GridNode.cs",
               "ToolTip": "E:\\_coding\\VisualStudio\\repos\\ParallelJobManager\\ParallelJobManager\\GridNode.cs",
               "RelativeToolTip": "ParallelJobManager\\GridNode.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-11T13:30:02.891Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
+              "Title": "Job.cs",
+              "DocumentMoniker": "E:\\_coding\\VisualStudio\\repos\\ParallelJobManager\\ParallelJobManager\\Job.cs",
+              "RelativeDocumentMoniker": "ParallelJobManager\\Job.cs",
+              "ToolTip": "E:\\_coding\\VisualStudio\\repos\\ParallelJobManager\\ParallelJobManager\\Job.cs",
+              "RelativeToolTip": "ParallelJobManager\\Job.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-09T15:26:52.051Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "InputDef.cs",
               "DocumentMoniker": "E:\\_coding\\VisualStudio\\repos\\ParallelJobManager\\ParallelJobManager\\InputDef.cs",
               "RelativeDocumentMoniker": "ParallelJobManager\\InputDef.cs",
               "ToolTip": "E:\\_coding\\VisualStudio\\repos\\ParallelJobManager\\ParallelJobManager\\InputDef.cs",
               "RelativeToolTip": "ParallelJobManager\\InputDef.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-11T13:29:01.644Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Job.cs",
-              "DocumentMoniker": "E:\\_coding\\VisualStudio\\repos\\ParallelJobManager\\ParallelJobManager\\Job.cs",
-              "RelativeDocumentMoniker": "ParallelJobManager\\Job.cs",
-              "ToolTip": "E:\\_coding\\VisualStudio\\repos\\ParallelJobManager\\ParallelJobManager\\Job.cs",
-              "RelativeToolTip": "ParallelJobManager\\Job.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvxcAAAAIAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "Helpers.cs",
+              "DocumentMoniker": "E:\\_coding\\VisualStudio\\repos\\ParallelJobManager\\ParallelJobManager\\Helpers.cs",
+              "RelativeDocumentMoniker": "ParallelJobManager\\Helpers.cs",
+              "ToolTip": "E:\\_coding\\VisualStudio\\repos\\ParallelJobManager\\ParallelJobManager\\Helpers.cs",
+              "RelativeToolTip": "ParallelJobManager\\Helpers.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-09T15:26:52.051Z",
+              "WhenOpened": "2026-04-21T21:28:31.73Z",
               "EditorCaption": ""
             }
           ]

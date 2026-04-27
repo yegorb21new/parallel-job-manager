@@ -18,6 +18,14 @@ namespace ParallelJobManager
             Failure
         }
 
+        public enum RetryPolicy
+        {
+            Immediate,
+            PriorityGroup,
+            End,
+            DoNotRetry
+        }
+
 
         public static Job GetNextJobByPriority(Dictionary<int, Queue<Job>> fullPrioJobsDict)
         {
@@ -34,7 +42,7 @@ namespace ParallelJobManager
                 }
             }
 
-            throw new InvalidOperationException("Scheduler should not call GetNextJobByPriority when there are no Jobs left.");
+            throw new InvalidOperationException("Scheduler called GetNextJobByPriority when there are no Jobs left.");
         }
     }
 }

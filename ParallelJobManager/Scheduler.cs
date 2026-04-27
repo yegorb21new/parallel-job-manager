@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 using static ParallelJobManager.Helpers;
 
 namespace ParallelJobManager
@@ -30,12 +31,13 @@ namespace ParallelJobManager
                     {
                         var nextJob = GetNextJobByPriority(PendingJobsByPriority);
                         node.CurrentJob = nextJob;
+                        nextJob.AttemptCount += 1;
 
                         var currExecution = new ActiveExecution(node, nextJob);
-                        Console.WriteLine($"[{DateTime.Now}]: Dispatching Job number {nextJob.Id} to master node {node.NodeName}");
-                        currExecution.Task = Task.Run(currExecution.ExecuteAsyncJob);
+                        Console.WriteLine($"[{DateTime.Now}]: Dispatching Job number {nextJob.Id} to master node {node.NodeName} for attempt {nextJob.AttemptCount} of {nextJob.Input.MaxAttempts} max attempts.");
 
                         ActiveExecutions.Add(currExecution);
+                        currExecution.Task = Task.Run(currExecution.ExecuteAsyncJob);
                     }
                 }
 
@@ -43,9 +45,25 @@ namespace ParallelJobManager
                 {
                     var finishedTask = await Task.WhenAny(ActiveExecutions.Select(x => x.Task));
                     var finishedExecution = ActiveExecutions.Where(x => x.Task == finishedTask).FirstOrDefault();
+                    var finishedJob = finishedExecution.Job;
 
-                    finishedExecution.GridNode.CurrentJob = null;
-                    ActiveExecutions.Remove(finishedExecution);
+                    var finishedJobStatus = finishedJob.Status;
+                    var finishedJobRetryPolicy = finishedJob.Input.RetryPolicy;
+                    int maxTries = finishedJob.Input.MaxAttempts;
+                    int attemps = finishedJob.AttemptCount;
+
+                    if (finishedJobStatus == JobStatus.Failure && attemps < maxTries)
+                    {
+                        attemps += 1;
+                        Console.WriteLine($"[{DateTime.Now}]: Immediately retrying Job number {finishedJob.Id} on master node {finishedExecution.GridNode.NodeName} for attempt {attemps} of {maxTries} max attempts.");
+                        finishedExecution.ExecuteAsyncJob();
+                    }
+
+                    if (finishedJobStatus == JobStatus.Success || (attemps >= maxTries))
+                    {
+                        finishedExecution.GridNode.CurrentJob = null;
+                        ActiveExecutions.Remove(finishedExecution);
+                    }
                 }
             }
         }
