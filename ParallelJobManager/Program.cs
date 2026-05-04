@@ -13,11 +13,11 @@ namespace ParallelJobManager
         {
             var inputsList = new List<InputDef>()
             {
-                new InputDef(1, "AnnBase_", "FAS157", 2, RetryPolicy.Immediate,2),
-                new InputDef(2, "AnnBase_", "TAX", 2, RetryPolicy.Immediate,2),
-                new InputDef(3, "AnnAttrib_", "GAAP", 4, RetryPolicy.Immediate,2),
-                new InputDef(4, "AnnForecast_", "STAT107", 9, RetryPolicy.Immediate,2),
-                new InputDef(5, "AnnForecast_", "STAT133", 8, RetryPolicy.Immediate,2)
+                new InputDef(1, "AnnBase_", "FAS157", 2, RetryPolicy.Immediate,3),
+                new InputDef(2, "AnnBase_", "TAX", 2, RetryPolicy.Immediate,3),
+                new InputDef(3, "AnnAttrib_", "GAAP", 4, RetryPolicy.Immediate,3),
+                new InputDef(4, "AnnForecast_", "STAT107", 9, RetryPolicy.Immediate,3),
+                new InputDef(5, "AnnForecast_", "STAT133", 8, RetryPolicy.Immediate,3)
             };
 
             var nodesList = new List<string>()

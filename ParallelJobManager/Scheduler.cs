@@ -47,19 +47,18 @@ namespace ParallelJobManager
                     var finishedExecution = ActiveExecutions.Where(x => x.Task == finishedTask).FirstOrDefault();
                     var finishedJob = finishedExecution.Job;
 
-                    var finishedJobStatus = finishedJob.Status;
                     var finishedJobRetryPolicy = finishedJob.Input.RetryPolicy;
                     int maxTries = finishedJob.Input.MaxAttempts;
-                    int attemps = finishedJob.AttemptCount;
 
-                    if (finishedJobStatus == JobStatus.Failure && attemps < maxTries)
+                    if (finishedJob.Status == JobStatus.Failure && finishedJob.AttemptCount < maxTries)
                     {
-                        attemps += 1;
-                        Console.WriteLine($"[{DateTime.Now}]: Immediately retrying Job number {finishedJob.Id} on master node {finishedExecution.GridNode.NodeName} for attempt {attemps} of {maxTries} max attempts.");
-                        finishedExecution.ExecuteAsyncJob();
-                    }
+                        finishedJob.AttemptCount += 1;
 
-                    if (finishedJobStatus == JobStatus.Success || (attemps >= maxTries))
+                        finishedExecution.Task = Task.Run(finishedExecution.ExecuteAsyncJob);
+
+                        Console.WriteLine($"[{DateTime.Now}]: Immediately retrying Job number {finishedJob.Id} on master node {finishedExecution.GridNode.NodeName} for attempt {finishedJob.AttemptCount} of {maxTries} max attempts.");
+                    }
+                    else if (finishedJob.Status == JobStatus.Success || finishedJob.AttemptCount >= maxTries)
                     {
                         finishedExecution.GridNode.CurrentJob = null;
                         ActiveExecutions.Remove(finishedExecution);
